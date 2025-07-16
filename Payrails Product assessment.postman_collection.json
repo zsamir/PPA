@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "8da0389f-8ef6-4e0e-9732-122fa4afbee8",
+		"name": "Payrails Product assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46781179",
+		"_collection_link": "https://zeinabsamir-5044775.postman.co/workspace/Zeinab-Samir's-Workspace~6e5d7317-48db-4dce-80e2-597568435fd1/collection/46781179-8da0389f-8ef6-4e0e-9732-122fa4afbee8?action=share&source=collection_link&creator=46781179"
+	},
+	"item": [
+		{
+			"name": "Request access token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "clientId",
+						"value": "1Tdkq5OKtz0BnA3VqCqvnvBJxZdTTxvA",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "PV120FvhHL4CQUcjn9G0tDBpsKe2xkwsTZ56L36jgpTnKbIgkN5pxyaRlYg0wtuFoW1cwodfBuccGcGQBwhQQ6i9D6LcuQnwqZAYmiH4Waou6UXzmfdBvsMaDff4e4VjppAmKUdpfBE481eIu9rhazc12H1UKqU5bqmKKxfbq9Yoe0owQjukvlckHmuVoGuyK4OZEehMnHHLGPP5v3ag6BhKb1PUCKOFXuOP67B5SVCiFAovkmL7nRZ4db6EtUIH",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/auth/token/1Tdkq5OKtz0BnA3VqCqvnvBJxZdTTxvA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"token",
+						"1Tdkq5OKtz0BnA3VqCqvnvBJxZdTTxvA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Initialize client SDK",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImY1YjE1ODU0LWE3Y2YtNGFmMy1iNjU3LTI2NTJmNWM2YzY3OCIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicGF5cmFpbHMtYmFja2VuZCJdLCJleHAiOjE2OTg1OTYzNjIsImh0dHBzOi8vcGF5cmFpbHMuaW8vY2xhaW1zL2N1c3RvbV9zY29wZSI6IntcImFsbG93c0FsbFwiOnRydWUsXCJ0eXBlXCI6XCJtZXJjaGFudFwifSIsImlzcyI6InBheXJhaWxzIiwia2lkIjoiZjViMTU4NTQtYTdjZi00YWYzLWI2NTctMjY1MmY1YzZjNjc4IiwicGVybWlzc2lvbnMiOlsiYWNjb3VudHM6bGlzdCIsImFjY291bnRzOnJlYWQiLCJhY2NvdW50dHlwZXM6Y3JlYXRlIiwiYW5hbHl0aWNzOnJlYWQiLCJhcGlsb2dzOmxpc3QiLCJhcGlsb2dzOnJlYWQiLCJiaW46cmVhZCIsImNsaWVudHM6bGlzdCIsImNsaWVudHM6cm90YXRlX3NlY3JldCIsImNvbnN1bWVyY2hlY2tvdXQ6cmVhZDpjb25maWciLCJjb25zdW1lcmNoZWNrb3V0OndyaXRlOmNvbmZpZyIsImV4ZWN1dGlvbnM6YXV0aG9yaXplIiwiZXhlY3V0aW9uczpjYW5jZWwiLCJleGVjdXRpb25zOmNhcHR1cmUiLCJleGVjdXRpb25zOmNvbmZpcm0iLCJleGVjdXRpb25zOmNyZWF0ZSIsImV4ZWN1dGlvbnM6bGlzdCIsImV4ZWN1dGlvbnM6bG9va3VwIiwiZXhlY3V0aW9uczpyZWFkIiwiZXhlY3V0aW9uczpyZWZ1bmQiLCJob2xkZXJzOmNyZWF0ZSIsImhvbGRlcnM6bGlzdCIsImhvbGRlcnM6bG9jayIsImhvbGRlcnM6cmVhZCIsImhvbGRlcnM6dW5sb2NrIiwiaW5zdHJ1bWVudHM6Y3JlYXRlIiwiaW5zdHJ1bWVudHM6ZGVsZXRlIiwiaW5zdHJ1bWVudHM6bGlzdCIsImluc3RydW1lbnRzOnJlYWQiLCJpbnN0cnVtZW50czp0b2tlbml6ZSIsImludGVncmF0aW9uczpsaXN0Iiwia2V5czpsaXN0Iiwia2V5czpyb3RhdGUiLCJwYXltZW50bWV0aG9kczpjcmVhdGUiLCJwYXltZW50bWV0aG9kczpsaXN0IiwicGF5bWVudG1ldGhvZHM6cmVhZCIsInBheW1lbnRtZXRob2RzOnVwZGF0ZSIsInBheW1lbnRzOmxpc3QiLCJwYXltZW50czpyZWFkIiwicHJvdmlkZXJzOmNyZWF0ZSIsInByb3ZpZGVyczpsaXN0IiwicHJvdmlkZXJzOnByb3h5IiwicHJvdmlkZXJzOnJlYWQiLCJwcm92aWRlcnM6dXBkYXRlIiwicmF3bm90aWZpY2F0aW9uczpsaXN0Iiwicm9sZXM6bGlzdCIsInJvbGVzOnJlYWQiLCJydWxlc2V0czpjcmVhdGUiLCJydWxlc2V0czpsaXN0IiwicnVsZXNldHM6cmVhZCIsInNkazpyZWFkOmNvbmZpZyIsInN0YXRpc3RpY3M6bGlzdDpwYXltZW50cyIsInRva2VuczpjcmVhdGUiLCJ0b2tlbnM6ZGVsZXRlIiwidG9rZW5zOmxpc3QiLCJ0b2tlbnM6cmVhZCIsInRyYW5zZmVyczpjcmVhdGUiLCJ0cmFuc2ZlcnM6bGlzdCIsInRyYW5zZmVyczpyZWFkIiwidXNlcnM6YmxvY2siLCJ1c2VyczpjcmVhdGUiLCJ1c2VyczpsaXN0IiwidXNlcnM6cmVhZCIsInVzZXJzOnJvbGU6YXNzaWduIiwidXNlcnM6cm9sZTp1bmFzc2lnbiIsInVzZXJzOnVuYmxvY2siLCJ2YXVsdDpyZWFkOmNvbmZpZyIsIndvcmtmbG93czpjcmVhdGUiLCJ3b3JrZmxvd3M6bGlzdCIsIndvcmtmbG93czpyZWFkIiwiZmllbGRzOmNyZWF0ZSIsImZpZWxkczp1cGRhdGUiLCJmaWVsZHM6cmVhZCIsImZpZWxkczpsaXN0Il0sInN1YiI6ImJhY2tlbmQifQ.jzphnYIaMCCQui7JXXStkSSGpXr0nOyyT2FlSD_gI8OB8eSWzCopE91pDu0tq0Q-eNsDrbhfocCj18CDa4ljrAAHyzln-HbGhn2HsGNFgFfpFqvTjke27u9LAPOa-XKjTkyqw1OZJwMCmoaQ1o-VUFoCCb1Po5CrUkg81qYBDvKAmqUXbvfWvgHJGzq7kTVwGxLDcJHwGnj0ZNXSa8hgS-dbxJzxVpY3Kwji8-AFVJK89c_TSJv2NCTgeHOPYbhlXjKIoqW5bGMjNscOFSfHZUvmmijp_4vihu_aZ7qa7zK-BVELyM3h78Uk72g4dvo69w2uN2lSMoHfsNcCxBuOzA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"tokenization\",\n  \"holderReference\": \"Payrails Product assessment\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/merchant/client/init",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"merchant",
+						"client",
+						"init"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Payment Instrument",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImY1YjE1ODU0LWE3Y2YtNGFmMy1iNjU3LTI2NTJmNWM2YzY3OCIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsicGF5cmFpbHMtYmFja2VuZCJdLCJleHAiOjE2OTg1OTYzNjIsImh0dHBzOi8vcGF5cmFpbHMuaW8vY2xhaW1zL2N1c3RvbV9zY29wZSI6IntcImFsbG93c0FsbFwiOnRydWUsXCJ0eXBlXCI6XCJtZXJjaGFudFwifSIsImlzcyI6InBheXJhaWxzIiwia2lkIjoiZjViMTU4NTQtYTdjZi00YWYzLWI2NTctMjY1MmY1YzZjNjc4IiwicGVybWlzc2lvbnMiOlsiYWNjb3VudHM6bGlzdCIsImFjY291bnRzOnJlYWQiLCJhY2NvdW50dHlwZXM6Y3JlYXRlIiwiYW5hbHl0aWNzOnJlYWQiLCJhcGlsb2dzOmxpc3QiLCJhcGlsb2dzOnJlYWQiLCJiaW46cmVhZCIsImNsaWVudHM6bGlzdCIsImNsaWVudHM6cm90YXRlX3NlY3JldCIsImNvbnN1bWVyY2hlY2tvdXQ6cmVhZDpjb25maWciLCJjb25zdW1lcmNoZWNrb3V0OndyaXRlOmNvbmZpZyIsImV4ZWN1dGlvbnM6YXV0aG9yaXplIiwiZXhlY3V0aW9uczpjYW5jZWwiLCJleGVjdXRpb25zOmNhcHR1cmUiLCJleGVjdXRpb25zOmNvbmZpcm0iLCJleGVjdXRpb25zOmNyZWF0ZSIsImV4ZWN1dGlvbnM6bGlzdCIsImV4ZWN1dGlvbnM6bG9va3VwIiwiZXhlY3V0aW9uczpyZWFkIiwiZXhlY3V0aW9uczpyZWZ1bmQiLCJob2xkZXJzOmNyZWF0ZSIsImhvbGRlcnM6bGlzdCIsImhvbGRlcnM6bG9jayIsImhvbGRlcnM6cmVhZCIsImhvbGRlcnM6dW5sb2NrIiwiaW5zdHJ1bWVudHM6Y3JlYXRlIiwiaW5zdHJ1bWVudHM6ZGVsZXRlIiwiaW5zdHJ1bWVudHM6bGlzdCIsImluc3RydW1lbnRzOnJlYWQiLCJpbnN0cnVtZW50czp0b2tlbml6ZSIsImludGVncmF0aW9uczpsaXN0Iiwia2V5czpsaXN0Iiwia2V5czpyb3RhdGUiLCJwYXltZW50bWV0aG9kczpjcmVhdGUiLCJwYXltZW50bWV0aG9kczpsaXN0IiwicGF5bWVudG1ldGhvZHM6cmVhZCIsInBheW1lbnRtZXRob2RzOnVwZGF0ZSIsInBheW1lbnRzOmxpc3QiLCJwYXltZW50czpyZWFkIiwicHJvdmlkZXJzOmNyZWF0ZSIsInByb3ZpZGVyczpsaXN0IiwicHJvdmlkZXJzOnByb3h5IiwicHJvdmlkZXJzOnJlYWQiLCJwcm92aWRlcnM6dXBkYXRlIiwicmF3bm90aWZpY2F0aW9uczpsaXN0Iiwicm9sZXM6bGlzdCIsInJvbGVzOnJlYWQiLCJydWxlc2V0czpjcmVhdGUiLCJydWxlc2V0czpsaXN0IiwicnVsZXNldHM6cmVhZCIsInNkazpyZWFkOmNvbmZpZyIsInN0YXRpc3RpY3M6bGlzdDpwYXltZW50cyIsInRva2VuczpjcmVhdGUiLCJ0b2tlbnM6ZGVsZXRlIiwidG9rZW5zOmxpc3QiLCJ0b2tlbnM6cmVhZCIsInRyYW5zZmVyczpjcmVhdGUiLCJ0cmFuc2ZlcnM6bGlzdCIsInRyYW5zZmVyczpyZWFkIiwidXNlcnM6YmxvY2siLCJ1c2VyczpjcmVhdGUiLCJ1c2VyczpsaXN0IiwidXNlcnM6cmVhZCIsInVzZXJzOnJvbGU6YXNzaWduIiwidXNlcnM6cm9sZTp1bmFzc2lnbiIsInVzZXJzOnVuYmxvY2siLCJ2YXVsdDpyZWFkOmNvbmZpZyIsIndvcmtmbG93czpjcmVhdGUiLCJ3b3JrZmxvd3M6bGlzdCIsIndvcmtmbG93czpyZWFkIiwiZmllbGRzOmNyZWF0ZSIsImZpZWxkczp1cGRhdGUiLCJmaWVsZHM6cmVhZCIsImZpZWxkczpsaXN0Il0sInN1YiI6ImJhY2tlbmQifQ.jzphnYIaMCCQui7JXXStkSSGpXr0nOyyT2FlSD_gI8OB8eSWzCopE91pDu0tq0Q-eNsDrbhfocCj18CDa4ljrAAHyzln-HbGhn2HsGNFgFfpFqvTjke27u9LAPOa-XKjTkyqw1OZJwMCmoaQ1o-VUFoCCb1Po5CrUkg81qYBDvKAmqUXbvfWvgHJGzq7kTVwGxLDcJHwGnj0ZNXSa8hgS-dbxJzxVpY3Kwji8-AFVJK89c_TSJv2NCTgeHOPYbhlXjKIoqW5bGMjNscOFSfHZUvmmijp_4vihu_aZ7qa7zK-BVELyM3h78Uk72g4dvo69w2uN2lSMoHfsNcCxBuOzA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"holderReference\": \"Payrails Product assessment\",\n  \"encryptedInstrumentDetails\": \"eyJhbGciOiJSU0EtT0FFUC0yNTYiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwia2lkIjoic3RhdGljLWtleS1pZCJ9.0WH8TBmd_tkrPW8H6_e_ju9qvR5ffg9gA02JNE8sTT4aGoLuVexFtAbqC6QkKWuBqTKWy1lVwLl3QVpD0OAoFdFpY5XrefgT4IRSRWY_heEGp2VEhtwqHSobIWO9ps003fcFSWdgyhpp40GUXNTBkZQzBaMu5UAy5XoMmPaRc-ebEtO6G4unMYVlFA6w4Wp_o5fXmTZuOGxm4N_-PiKViUembsxWTJUbk_WLVh9uq4udKKpg8qT3fqWcIK54Oo0ty1Q9RW2yNNAEHhuXru20wJcilpW5-YYuNgrnT4F6q7BtLGWn9s3doYyjP1qd4iLmfacY9xlVS_oYz-W83W7TXQ.94rP6Fk8_JHJzZztNYEtPQ.WPCIx4cIT2sIn2pRQR9hROTanN5xYaUCirK9VQT5INy3UBkneIewtVxM_uLnohxZoC109z48pYYaszkl9iiu5y9GFkksAdpbprIk39IvgFJqNuJUTDHBoi_VzzkekY1aYzKh5cMwffMWp7g-AF6m4qi7r3vPYIo8SFDos4bWxcgwDYSSTCwM8KTK__42lTjreVFjcrzZqMR2_jtUl4amZdSSyak67Bc88TaIAtoElvM.ZAPyaSJaZxjCXcNmzyKn7tEMbua1CPeyaYGjIH6twUE\",  \n  \"futureUsage\": \"CardOnFile\",\n  \"storeInstrument\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/public/payment/instruments/tokenize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"public",
+						"payment",
+						"instruments",
+						"tokenize"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
